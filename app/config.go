@@ -83,7 +83,7 @@ func (a *App) LimitedClientConfig() map[string]string {
 	return a.Srv.limitedClientConfig
 }
 
-// Registers a function with a given config to be called when the config is reloaded and may have changed. The function
+// Registers a function with a given listener to be called when the config is reloaded and may have changed. The function
 // will be called with two arguments: the old config and the new config. AddConfigListener returns a unique ID
 // for the listener that can later be used to remove it.
 func (s *Server) AddConfigListener(listener func(*model.Config, *model.Config)) string {
